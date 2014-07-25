@@ -30,6 +30,7 @@ hr {
     border: 0;
     border-bottom: 5px dashed $darkest;
     background: $palest;
+    margin: 0;
 }
 
 /* fontelico - courtesy of http://weloveiconfonts.com/ */
@@ -41,6 +42,7 @@ hr {
 p {
 	@include font-size(1);
 	line-height: 2rem;
+	margin-top: 1rem;
 }
 
 a {
@@ -54,10 +56,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $sans-font;
 	color: $darkest;
 	line-height: 100%;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 
 h1 {
 	@include font-size(5);
+	line-height: 50%;
 }
 
 h2 {
@@ -80,23 +85,39 @@ h6 {
 	@include font-size(0.8);
 }
 
-code {
+pre, code {
 	background: $palest;
 	padding: 0.2rem;
 	font-size: 1rem;
 }
 
+pre {
+	padding: 1rem;
+	overflow: scroll;
+}
+
 blockquote {
 	border-left: 0.5rem solid $darkest;
+	padding: 0.5rem;
 	padding-left: 1rem;
 	@include font-size(1);
 	line-height: 2rem;
 	font-family: $sans-font;
-	font-style: italic;
-	margin: 0 15%;
+	/*font-style: italic;*/
+	margin: 0 10%;
 	background-color: $palest;
 
 }
+
+ul li {
+	list-style: square outside none;
+}
+
+dt { 
+	font-weight: bold; 
+	font-family: $sans-font;
+}
+
 /***** Sections *********************************************************************************/
 header {
 	color: $palest;
@@ -104,7 +125,7 @@ header {
 	zoom: 1;
 }
 
-header h1 {
+header h1, header a {
 	color: $palest;
 }
 
@@ -117,8 +138,12 @@ header h1 {
 
 .strapline {
 	clear: both;
+	padding-top: 2rem;
 }
 
+section {
+	padding: 1rem 0 1rem 0;
+}
 
 footer a, footer p {
 	color: $palest;
@@ -137,6 +162,10 @@ footer {
 .cc {
 	float: right;
 	text-align: right;
+}
+
+address {
+	font-style: normal;
 }
 
 /***** Media Queries *********************************************************************************/

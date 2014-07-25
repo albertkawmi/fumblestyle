@@ -10,57 +10,132 @@
 <header class="darkest-bg"><div class="wrap">
 	<h1 class="logo"><span class="fontelico-emo-happy"></span></h1>
 	<h1 class="title">Fumblestyle</h1>
-	<p class="strapline">I'm fumbling around with stylesheets using Sass (SCSS) with Koala.</p>
+	<p class="strapline">I'm fumbling around with stylesheets using <a href="http://sass-lang.com/">Sass</a> (SCSS) with <a href="http://koala-app.com/">Koala</a>.</p>
 </div></header>
 
 <main>
 
 <section><div class="wrap">
 	<h2>Introduction</h2>
-	<p>I find the idea of styleguides quite interesting. I am not a front-end developer, but this seems like the best way to start any serious project; create a single HTML page that contains all the different elements and design patterns that you'll use in a project. A thoroughly put-together styleguide allows you to see what impact your CSS changes have across all your design elements, saving you having to test against everything. (I guess...)</p>
-	<p>The smily-face logo utilises the 'fontelico' font via <a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></p>
+	<p>This seems like the best way to learn CSS: create a single HTML page that contains all the different elements and design patterns that you'll likely use in a web design project. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
+	<p>I'll link to tools, tutorials and relevant articles as I fumble along. The smily-face logo utilises the 'fontelico' font via <a href="http://weloveiconfonts.com/">weloveiconfonts.com</a> and I used <a href="https://kuler.adobe.com/create/color-wheel/">Adobe's colour wheel tool</a> to pick the colour scheme.</p>
 </div></section>
 <hr>
-<section><div class="wrap">
-	<h2>Boxes in a row...</h2>
-	<p>A very simply way of lining up boxes of content will suffice for most simple websites. These are divs are set to <code>display: inline-block;</code> with a media query to switch to block representation for smaller screens. The width is set as a percentage with margin also as a percentage.</p>
-	<div class="row">
-		<div class="box-3 pale-bg">Block 1 has just one sentence in it.</div>
-		<div class="box-3 pale-bg">Block 2 has more than one sentence. In fact it has multiple sentences because we want this to be the tallest block, height-wise. Hopefully this will do the trick.</div>
-		<div class="box-3 pale-bg">Block 3 has two sentences. It should be taller than block 1 but not block 3.</div>
-	</div>
-	<p>As a newcomer to web design, I have to say I am genuinely perplexed by how difficult it is to put text in boxes and place those boxes exactly how you want them. I know there are frameworks and grid patterns and so on and so forth. But it is remarkably complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>
-</div></section>
-<hr>
-<section><div class="wrap">
+<section class="pale-bg"><div class="wrap">
 	<h2>Images</h2>
 	<p>I have set <code>img { width: 100%; }</code> as a default for responsive images. I imagine there will be more to it than this, but it should serve as a starting point so that if images are dropped into the page they don't look too bad on whatever screen size.</p>
 	<img src="http://placekitten.com/300/100">
-	<p>I love <a href="http://placehold.it">placehold.it</a> - a great service for dropping sizable placeholder images into your designs. But <a href="http://placekitten.com">placekitten.com</a> is better if you need kittens.</p>
+	<p>Thanks to <a href="http://placekitten.com">placekitten.com</a> for providing kitten placeholder images in any dimensions.</p>
 </div></section>
 <hr>
 <section><div class="wrap">
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+	<h2>Boxes in a row</h2>
+	<p>This is intended to be a simple structure for creating rows of boxes. These are divs are set to <code>display: inline-block;</code> with a media query to switch to block representation for smaller screens. The width is set as a percentage with margin also as a percentage.</p>
+	<div class="row">
+		<div class="box-33 pale-bg">Block 1 has just one sentence in it.</div>
+		<div class="box-33 pale-bg">Block 2 has more than one sentence. In fact it has multiple sentences because we want this to be the tallest block, height-wise. Hopefully this will do the trick.</div>
+		<div class="box-33 pale-bg">Block 3 has two sentences. It should be taller than block 1 but not block 3.</div>
+	</div>
+	<p>The above example was a row of three boxes which I gave the class name <code>.box-33</code>. The '33' represents the approximate width of the box depending on how many you want in a row. More classes have been added to allow for different layouts: <code>.box-25, .box-75, .box-66</code> and so on.</p>
+	<p>Each row of boxes (annoyingly) has to be wrapped in a div that has the <code>.row { font-size: 0; }</code> class; one of the solutions from CSS-tricks for <a href="http://css-tricks.com/fighting-the-space-between-inline-block-elements/">how to fight unwanted gaps between inline-block elements</a>.</p>
+	<P>There's a great tutorial at <a href="http://learnlayout.com/">learnlayout.com</a> which I found very useful as a newcomer.</P>
+</div></section>
+<hr>
+<section class="pale-bg"><div class="wrap">
+	<div class="row">
+		<div class="box-50">
+			<h2>A rant about boxes</h2>
+			<p>I am  perplexed by how difficult it is to put text in boxes and place those boxes exactly how you want them. I know there are frameworks and grid patterns and so on and so forth. But it is remarkably complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>	
+		</div>		
+		<div class="box-50">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+	</div>
 </div></section>
 <hr>
 <section><div class="wrap">
 	<h2>More Typography</h2>
-	<p>This section showcases the remaining typography elements. Rather than reach for some lorem ipsum, I'll rattle off a few of them here... You've got the <code>&lt;code&gt; element</code>, the blockquote ...</p>
-	<blockquote>"Life is a test. It is only a test."</blockquote>
-	<p>What's going on here then?</p>
+	<p>This section showcases the remaining typography elements. Rather than reach for some lorem ipsum, I'll rattle off a few of them here... We've alrady had the <code>&lt;code&gt;</code> tag and there's the<code>&lt;pre&gt;</code> tag for blocks of code:</p>
+<pre>
+function downloadCSV() {
+	//join the CSV rows separated by a newline character
+	var csvString = csvRows.join("\n");
+
+	// create a blob for the CSV file and set the link href to point to that blob
+	var blob = new Blob([csvString], {type: "text/css;charset=utf-8"});
+	var a = document.getElementById('csv-link');
+	a.href = window.URL.createObjectURL(blob);
+
+	// Set the filename
+	a.download = "GA_" + document.qname["query-name"].value + "_at_" + Date() + ".csv";
+
+	// Hide the 'loading...' animation and show the download link
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('loading').innerHTML = '';
+	clearInterval(loader);
+	a.style.display = 'inline';
+	}
+</pre>
+	<p>Next, the blockquote for highlighting profound passages of prose:</p>
+	<blockquote>"This is the day of dramatisation. Merely stating a truth isn't enough. The truth has to be made vivid, interesting, dramatic. You have to use showmanship. The movies do it. Television does it. And you will too if you want attention."</blockquote>
+	<p>Next let's take a look at lists...</p>
+</div></section>
+<hr>
+<section class="pale-bg"><div class="wrap">
+<h2>Lists</h2>
+<p>Support for the <code>::marker</code> pseudo-element would be cool because, although you can style list items with images, you can't format the list markers as text with CSS. For example, I'd like the bullets and numbers to be coloured purple-is this possible?</p>
+	<div class="row">
+		<div class="box-33">
+			<h3>Ordered Lists</h3>
+			<p>A one, a two, a-</p>
+			<ol>
+				<li>One</li>
+				<li>Two</li>
+				<li>Three</li>
+				<li>Four</li>
+			</ol>
+			<p>I do enjoy a good, numerical list. So orderly and numbered.</p>	
+		</div>		
+		<div class="box-33">
+			<h3>Unordered Lists</h3>
+			<p>Never gonna:</p>
+			<ul>
+				<li>Give you up</li>
+				<li>Let you down</li>
+				<li>Run around</li>
+				<li>Desert you</li>
+			</ul>
+			<p>I do enjoy a good, bullet-pointed list. So free and unordered.</p>
+		</div>
+		<div class="box-33">
+			<h3>Definition Lists</h3>
+			<dl>
+				<dt>What is love?</dt>
+				<dd>Baby don't hurt me.</dd>
+			</dl>
+			<dl>
+				<dt>Won't you take me to?</dt>
+				<dd>Funky Town.</dd>
+			</dl>
+			<dl>
+				<dt>Ain't nobody:</dt>
+				<dd>Loves me better.</dd>
+			</dl>				
+		</div>
+	</div>
 </div></section>
 
 </main>
 
 <footer class="darkest-bg">
 <div class="wrap">
-	<p class="footer-links"><a href="http://twitter.com/albertkawmi">@AlbertKawmi</a></p>
-	<p class="cc">Feel free to copy, reuse and do what you like...</p>
+	<address><p class="footer-links">Fumbled by <a href="http://twitter.com/albertkawmi">@AlbertKawmi</a></p></address>
+	<p class="cc"><a href="https://github.com/albertkawmi/fumblestyle">Fumblestyle on Github</a></p>
 </div>
 </footer>
 
