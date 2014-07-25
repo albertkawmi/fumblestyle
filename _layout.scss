@@ -24,6 +24,15 @@ div[class^=box-] {
 .box-66 { width: 64.6666%; }
 .box-75 { width: 73%; }
 
+div[class^=box-] h1,
+div[class^=box-] h2,
+div[class^=box-] h3,
+div[class^=box-] h4,
+div[class^=box-] h5,
+div[class^=box-] h6 {
+	margin-top: 0.5rem;
+}
+
 .pale-bg {
 	background-color: $palest;
 }
@@ -34,4 +43,8 @@ div[class^=box-] {
 
 .darkest-bg {
 	background-color: $darkest;
+}
+
+.top-line {
+	border-top: 0.5rem solid $darkest;
 }

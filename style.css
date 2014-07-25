@@ -36,6 +36,14 @@ div[class^=box-] {
 .box-75 {
   width: 73%; }
 
+div[class^=box-] h1,
+div[class^=box-] h2,
+div[class^=box-] h3,
+div[class^=box-] h4,
+div[class^=box-] h5,
+div[class^=box-] h6 {
+  margin-top: 0.5rem; }
+
 .pale-bg {
   background-color: #eee7ff; }
 
@@ -44,6 +52,9 @@ div[class^=box-] {
 
 .darkest-bg {
   background-color: #5c4d7f; }
+
+.top-line {
+  border-top: 0.5rem solid #5c4d7f; }
 
 /***** top-level elements *********************************************************************************/
 html {
@@ -89,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Voces", cursive;
   color: #5c4d7f;
   line-height: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem; }
 
 h1 {
