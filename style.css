@@ -7,41 +7,54 @@
 .wrap {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0 1rem; }
+
+.iframe-wrap {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden; }
+
+.iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; }
 
 .row {
   font-size: 0;
   margin: 0;
   padding: 0; }
 
-div[class^=box-] {
+div[class^=col-] {
   display: inline-block;
   padding: 0.5rem;
   vertical-align: top;
   margin: 1%;
   font-size: 1rem; }
 
-.box-50 {
+.col-50 {
   width: 48%; }
 
-.box-33 {
+.col-33 {
   width: 31.3333%; }
 
-.box-25 {
+.col-25 {
   width: 23%; }
 
-.box-66 {
+.col-66 {
   width: 64.6666%; }
 
-.box-75 {
+.col-75 {
   width: 73%; }
 
-div[class^=box-] h1,
-div[class^=box-] h2,
-div[class^=box-] h3,
-div[class^=box-] h4,
-div[class^=box-] h5,
-div[class^=box-] h6 {
+div[class^=col-] h1,
+div[class^=col-] h2,
+div[class^=col-] h3,
+div[class^=col-] h4,
+div[class^=col-] h5,
+div[class^=col-] h6 {
   margin-top: 0.5rem; }
 
 .pale-bg {
@@ -71,7 +84,9 @@ body {
   margin: 0; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  box-shadow: 1px 1px 1px #5c4d7f;
+  border-radius: 2px; }
 
 hr {
   border: 0;
@@ -99,14 +114,14 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Voces", cursive;
   color: #5c4d7f;
-  line-height: 100%;
+  line-height: 125%;
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
 h1 {
   font-size: 50px;
   font-size: 5rem;
-  line-height: 50%; }
+  line-height: 100%; }
 
 h2 {
   font-size: 30px;
@@ -128,14 +143,17 @@ h6 {
   font-size: 8px;
   font-size: 0.8rem; }
 
+code {
+  font-size: inherit; }
+
 pre, code {
   background: #eee7ff;
-  padding: 0.2rem;
-  font-size: 1rem; }
+  padding: 0.2rem; }
 
 pre {
   padding: 1rem;
-  overflow: scroll; }
+  overflow: scroll;
+  font-size: 1rem; }
 
 blockquote {
   border-left: 0.5rem solid #5c4d7f;
@@ -156,11 +174,53 @@ dt {
   font-weight: bold;
   font-family: "Voces", cursive; }
 
+/***** Tables *********************************************************************************/
+table {
+  width: 100%;
+  text-align: center;
+  font-family: "Voces", cursive;
+  border-collapse: separate;
+  border-spacing: 0.5rem; }
+
+tr, td, th, tfoot {
+  background-color: #eee7ff;
+  padding: 0.5rem;
+  white-space: nowrap;
+  border-radius: 2px; }
+
+th {
+  font-weight: bold;
+  background-color: #5c4d7f;
+  color: #eee7ff; }
+
+tfoot td {
+  border-top: 0.25rem double #5c4d7f;
+  font-weight: bold; }
+
+figure.table {
+  width: 100%;
+  overflow-y: auto;
+  _overflow: auto;
+  margin: 0 0 1em; }
+
+figcaption, caption {
+  font-family: "Voces", cursive;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 0.5rem;
+  text-align: center; }
+
+caption {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: bold; }
+
 /***** Sections *********************************************************************************/
 header {
   color: #eee7ff;
   overflow: auto;
-  zoom: 1; }
+  zoom: 1;
+  padding-top: 1rem; }
 
 header h1, header a {
   color: #eee7ff; }
@@ -198,7 +258,7 @@ address {
 
 /***** Media Queries *********************************************************************************/
 @media screen and (max-width: 699px) {
-  div[class^=box-] {
+  div[class^=col-] {
     display: block;
     width: 98%;
     margin-top: 1rem; }
