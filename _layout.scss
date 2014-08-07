@@ -9,6 +9,8 @@
     padding-bottom: 100%; // This the aspect ratio you can change
     height: 0;
     overflow: hidden;
+    box-shadow: 1px 1px 1px $darkest;
+	border-radius: 2px;
 }
 
 .iframe-wrap iframe {
