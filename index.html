@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Fumblestyle | An attempt to style every HTML element</title>
+<title>Fumblestyle | Fumbling around with stylesheets...</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
@@ -212,49 +212,54 @@ function downloadCSV() {
 		</div>
 		<div class="col-50">
 			<form>
+				<label>Choices: </label>
+				<select>
+						<option selected>Pick one...</option>
+					<optgroup label="Items..." selected>
+						<option>Item 1</option>
+						<option>Item 2</option> 
+						<option>Item 3</option>
+					</optgroup>
+					<optgroup label="Things...">
+						<option>Thing 1</option>
+						<option>Thing 2</option>
+						<option>Thing 3</option>
+					</optgroup>
+				</select>
+				<br>
+				<label>Name: </label><input type="text" placeholder="e.g. Rumplestiltskin...">
+				<br>
+				<label>Email: </label><input type="email" placeholder="your@email.address">
+				<br>
+				<label>Date: </label><input type="date">
+				<br>
+				<label>Sherry? </label>
 				<fieldset>
-					<legend>Fieldset's Legend Text</legend>
-					<label>Choices: </label>
-					<select>
-							<option selected>Pick one...</option>
-						<optgroup label="Items..." selected>
-							<option>Item 1</option>
-							<option>Item 2</option> 
-							<option>Item 3</option>
-						</optgroup>
-						<optgroup label="Things...">
-							<option>Thing 1</option>
-							<option>Thing 2</option>
-							<option>Thing 3</option>
-						</optgroup>
-					</select>
-					<br>
-					<label>Name: </label><input placeholder="e.g. Rumplestiltskin...">
-					<br>
-					<label>Email: </label><input type="email" placeholder="your@email.address">
-					<br>
-					<label>Date: </label><input type="date">
-					<br>
-					<label>Sherry? </label>
-					<fieldset class="radio">
-						<input type="radio" name="sherry" value="Yes please">Yes please 
-						<input type="radio" name="sherry" value="No thanks">No thanks 
-					</fieldset>
-					<br>
-					<label>Datalist: </label><input list="datalist">
-					<datalist id="datalist">
-						<option>Datalist Item 1</option>
-						<option>Datalist Item 2</option>
-						<option>Datalist Item 3</option>
-					</datalist>
-					<br>
-					<label>Text area: </label><textarea placeholder="Text goes here..."></textarea>
-					<br>
-					<input type="checkbox" name="agree" value="I agree">I agree
-					<br>
-					<button>Submit</button>
-
+					<ul>
+						<li><input type="radio" name="sherry" value="Yes please">Yes please </li>
+						<li><input type="radio" name="sherry" value="No thanks">No thanks </li>
+					</ul>
 				</fieldset>
+				<br>
+				<label>Datalist: </label><input type="text" list="datalist">
+				<datalist id="datalist">
+					<option>Datalist Item 1</option>
+					<option>Datalist Item 2</option>
+					<option>Datalist Item 3</option>
+				</datalist>
+				<br>
+				<label>Text area: </label><textarea placeholder="Text goes here..."></textarea>
+				<br>
+				<label>Do you like any of these? </label>
+				<fieldset>
+					<ul>
+						<li><input type="checkbox" name="agree" value="Apples">Apples</li>
+						<li><input type="checkbox" name="agree" value="Oranges">Oranges</li>
+						<li><input type="checkbox" name="agree" value="Bananas">Bananas</li>
+					</ul>
+				</fieldset>
+				<br>
+				<button>Submit</button>
 			</form>
 		</div>
 	</div>

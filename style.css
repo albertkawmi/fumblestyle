@@ -71,12 +71,56 @@ div[class^=col-] h6 {
 .top-line {
   border-top: 0.5rem solid #5c4d7f; }
 
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: #fff;
+  color: #000;
+  outline: 0;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  height: auto;
+  vertical-align: middle; }
+
+select, select, select {
+  background: white url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  padding: 0 25px 0 8px;
+  font-size: 1rem; }
+
 /***** top-level elements *********************************************************************************/
 html {
   font-size: 110%;
   font-family: "Lustria", serif; }
 
-div, input, textarea, fieldset.radio {
+div, input, textarea, fieldset {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -263,10 +307,6 @@ form {
   font-family: "Voces", cursive;
   font-size: 0.8rem; }
 
-fieldset {
-  border: solid 2px #5c4d7f;
-  width: 100%; }
-
 label {
   background-color: #5c4d7f;
   color: #eee7ff;
@@ -274,11 +314,10 @@ label {
   margin-top: 0.5rem;
   display: inline-block; }
 
-input, textarea, select, fieldset.radio {
+input, textarea, select, fieldset {
   padding: 0.5rem;
   border: solid 2px #5c4d7f;
   display: inline-block;
-  vertical-align: middle;
   width: 100%;
   border-radius: 0;
   margin: 0; }
@@ -286,23 +325,25 @@ input, textarea, select, fieldset.radio {
 input[type=radio], input[type=checkbox] {
   width: auto;
   display: default;
-  vertical-align: middle;
-  margin: 0 0.5rem;
-  margin-left: 1rem; }
+  margin: 0 0.5rem 0 1rem; }
 
 button {
-  box-shadow: 1px 1px 1px #5c4d7f;
+  box-shadow: 1px 1px 1px #eee7ff;
   border-radius: 5px;
-  background-color: #eee7ff;
-  color: #5c4d7f;
+  background-color: #5c4d7f;
+  color: #eee7ff;
   width: 100%;
   border: 0;
   font-size: 1rem;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  margin-top: 0.5rem; }
 
 button:hover {
-  background-color: #5c4d7f;
-  color: #eee7ff; }
+  background-color: #eee7ff;
+  color: #5c4d7f; }
+
+form li {
+  display: inline-block; }
 
 /***** Media Queries *********************************************************************************/
 @media screen and (max-width: 699px) {
@@ -347,4 +388,7 @@ button:hover {
 
   .footer-links, .cc {
     float: none;
-    text-align: center; } }
+    text-align: center; }
+
+  form li {
+    display: block; } }

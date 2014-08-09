@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'layout';
+@import 'reset-forms';
 @import url(http://fonts.googleapis.com/css?family=Lustria|Voces);
 @import url(http://weloveiconfonts.com/api/?family=fontelico);
 
@@ -11,7 +12,7 @@ html {
 	font-family: $base-font;
 }
 
-div, input, textarea, fieldset.radio {
+div, input, textarea, fieldset {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -229,11 +230,6 @@ form {
 	font-size: 0.8rem;
 }
 
-fieldset {
-	border: solid 2px $darkest;
-	width: 100%;
-}
-
 label {
 	background-color: $darkest;
 	color: $palest;
@@ -242,11 +238,10 @@ label {
 	display: inline-block;
 }
 
-input, textarea, select, fieldset.radio {
+input, textarea, select, fieldset {
 	padding: 0.5rem;
 	border: solid 2px $darkest;
 	display: inline-block;
-	vertical-align: middle;
 	width: 100%;
 	border-radius: 0;
 	margin: 0;
@@ -255,26 +250,27 @@ input, textarea, select, fieldset.radio {
 input[type=radio], input[type=checkbox] {
 	width: auto;
 	display: default;
-	vertical-align: middle;
-	margin: 0 0.5rem;
-	margin-left: 1rem;
+	margin: 0 0.5rem 0 1rem;
 }
 
 button {
-	box-shadow: 1px 1px 1px $darkest;
+	box-shadow: 1px 1px 1px $palest;
 	border-radius: 5px;
-	background-color: $palest;
-	color: $darkest;
+	background-color: $darkest;
+	color: $palest;
 	width: 100%;
 	border: 0;
 	font-size: 1rem;
 	padding: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 button:hover {
-	background-color: $darkest;
-	color: $palest;
+	background-color: $palest;
+	color: $darkest;
 }
+
+form li { display: inline-block;}
 
 /***** Media Queries *********************************************************************************/
 @import 'media';
