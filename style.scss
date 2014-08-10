@@ -12,7 +12,7 @@ html {
 	font-family: $base-font;
 }
 
-div, input, textarea, fieldset {
+div, input, textarea, fieldset, label, nav, nav li {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -178,7 +178,7 @@ header {
 	color: $palest;
 	overflow: auto;
 	zoom: 1;
-	padding-top: 1rem;
+	padding-top: 3rem;
 }
 
 header h1, header a {
@@ -186,10 +186,10 @@ header h1, header a {
 }
 
 .logo {
-	float: left;
+	float: right;
 }
 .title {
-	float: right;
+	float: left;
 }
 
 .strapline {
@@ -227,24 +227,29 @@ address {
 
 form {
 	font-family: $sans-font;
-	font-size: 0.8rem;
+	font-size: 1rem;
 }
 
 label {
-	background-color: $darkest;
-	color: $palest;
+	background-color: $palest;
+	color: $darkest;
 	padding: 0.5rem;
 	margin-top: 0.5rem;
 	display: inline-block;
+	width: 100%;
 }
 
 input, textarea, select, fieldset {
 	padding: 0.5rem;
-	border: solid 2px $darkest;
+	border: solid 2px $palest;
 	display: inline-block;
 	width: 100%;
 	border-radius: 0;
 	margin: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+	border-bottom: dotted 2px $darkest;
 }
 
 input[type=radio], input[type=checkbox] {

@@ -31,4 +31,32 @@
 	}
 
 	form li { display: block;}
+
+	nav li {
+		display: block;
+		width: 100%;
+		padding: 0.5rem;
+		margin: 0 auto;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	nav label {
+		margin: 0;
+		padding: 0.5;
+		font-size: 0.875rem;
+		width: auto;
+		float: right;
+	}
+
+	.show-menu {
+		display: inline-block;
+	}
+
+	input#show-menu:checked ~ #menu {
+    	display: block;
+	}
+
 }

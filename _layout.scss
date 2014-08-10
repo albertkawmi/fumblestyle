@@ -65,3 +65,49 @@ div[class^=col-] h6 {
 .top-line {
 	border-top: 0.5rem solid $darkest;
 }
+
+nav {
+	background-color: $darkest;
+	font-family: $sans-font;
+	color: $palest;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1 !important;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 1rem 0 0;
+	padding: 0.5rem;
+	font-size: 0.8rem;
+}
+
+nav li:hover, nav li:hover a {
+	background: $palest;
+	color: $darkest;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav a {
+	color: $palest;
+	text-decoration: none;
+}
+
+nav label {
+	margin: 0;
+}
+
+.show-menu, #show-menu {
+	display: none;
+	margin: 0;
+	padding: 0.5rem;
+}
+

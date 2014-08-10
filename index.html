@@ -6,16 +6,34 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-
+<nav>
+	<div class="wrap">
+	<label for="show-menu" class="show-menu">MENU</label>
+	<input type="checkbox" id="show-menu" role="button">
+	<ul id="menu">
+		<a href="#intro"><li>Intro</li></a>
+		<a href="#images"><li>Images</li></a>
+		<a href="#layout"><li>Layout</li></a>
+		<a href="#headings"><li>Headings</li></a>
+		<a href="#typography"><li>Code & Quotes</li></a>
+		<a href="#lists"><li>Lists</li></a>
+		<a href="#tables"><li>Tables</li></a>
+		<a href="#iframes"><li>iframes</li></a>
+		<a href="#forms"><li>Forms</li></a>
+	</ul>	
+	</div>
+</nav>
 <header class="darkest-bg"><div class="wrap">
-	<h1 class="logo"><span class="fontelico-emo-happy"></span></h1>
+
 	<h1 class="title">Fumblestyle</h1>
+	<h1 class="logo"><span class="fontelico-emo-happy"></span></h1>
+	
 	<p class="strapline">I'm fumbling around with stylesheets using <a href="http://sass-lang.com/">Sass</a> (SCSS) with <a href="http://koala-app.com/">Koala</a>.</p>
 </div></header>
 
 <main>
 
-<section><div class="wrap">
+<section id="intro"><div class="wrap">
 	<h2>Introduction</h2>
 	<p>This is a learning project to create a simple CSS stylesheet that can be used as a starting point for future projects. The focus is on simplicity, whilst making sure that the information looks good on both large and small screens. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
 	<h3>CSS Resources</h3>
@@ -24,14 +42,14 @@
 	<p>Each of these sections is wrapped in a div with <code>max-width: 960px</code> so that I could set the background colour across the full width of the screen but keep the content to 960px. I thought about implementing this <a href="http://css-tricks.com/examples/FullBrowserWidthBars/">example of full browser width bars</a>, but it felt like overkill for the sake of avoiding one wrapper div (per section...) I might return to it in future.</p>
 </div></section>
 <hr>
-<section class="pale-bg"><div class="wrap">
+<section id="images" class="pale-bg"><div class="wrap">
 	<h2>Images</h2>
 	<p>I have set <code>img { width: 100%; }</code> as a default for responsive images. I imagine there will be more to it than this, but it should serve as a starting point so that if images are dropped into the page they don't look too bad on whatever screen size.</p>
 	<img src="http://placekitten.com/1200/400">
 	<p>Thanks to <a href="http://placekitten.com">placekitten.com</a> for providing kitten placeholder images in any dimensions. I also like <a href="http://placehold.it/">placehold.it</a> for sites where a lower cuteness factor is more appropriate.</p>
 </div></section>
 <hr>
-<section><div class="wrap">
+<section id="layout"><div class="wrap">
 	<h2>Simple Layout</h2>
 	<p>This is intended to be a simple structure for creating rows and columns.</p>
 	<p>Here is a single row with three columns which I gave the class name <code>.col-33</code>. The '33' represents the approximate width of the column depending on how many you want in a row. More classes have been added to allow for different layouts: <code>.col-25, .col-75, .col-66</code> and so on.</p>
@@ -68,7 +86,7 @@
 	<P>Lastly, here's a <a href="http://learnlayout.com/">great tutorial about CSS layout</a> which I found very useful as a newcomer.</p>
 </div></section>
 <hr>
-<section class="pale-bg"><div class="wrap">
+<section id="headings" class="pale-bg"><div class="wrap">
 	<div class="row">
 		<div class="col-50">
 			<h2>A rant about CSS layouts</h2>
@@ -85,7 +103,7 @@
 	</div>
 </div></section>
 <hr>
-<section><div class="wrap">
+<section id="typography"><div class="wrap">
 	<h2>More Typography</h2>
 	<p>This section showcases the remaining typography elements. Rather than reach for some lorem ipsum, I'll rattle off a few of them here... We've alrady had the <code>&lt;code&gt;</code> tag and there's the<code>&lt;pre&gt;</code> tag for blocks of code:</p>
 <pre>
@@ -113,7 +131,7 @@ function downloadCSV() {
 	<p>Next let's take a look at lists...</p>
 </div></section>
 <hr>
-<section class="pale-bg"><div class="wrap">
+<section id="lists" class="pale-bg"><div class="wrap">
 <h2>Lists</h2>
 <p>Support for the <code>::marker</code> pseudo-element would be cool because, although you can style list items with images, you can't format the list markers as text with CSS. For example, I'd like the bullets and numbers to be coloured purple-is this possible?</p>
 	<div class="row">
@@ -157,7 +175,7 @@ function downloadCSV() {
 	</div>
 </div></section>
 <hr>
-<section><div class="wrap">
+<section id="tables"><div class="wrap">
 	<h2>Tables</h2>
 	<p>Making tables responsive seems to be a can of worms. Following <a href="http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/">this 'Super Simple' solution</a> I have used a container div with overflow scrolling:</p>
 	<figure class="table">
@@ -182,7 +200,7 @@ function downloadCSV() {
 	<p>There are <a href="http://css-tricks.com/responsive-data-table-roundup/">many more elegant solutions</a> but most of them require Javascript. I decided I would only implement something more involved if there was a specific use case in mind, as that would determine the best solution.
 </div></section>
 <hr>
-<section class="pale-bg"><div class="wrap">
+<section id="iframes" class="pale-bg"><div class="wrap">
 	<h2>Responsive iframes</h2>
 	<p>Found a <a href="http://www.a1bloggerseo.com/2014/07/google-map-code-for-responsive-websites.html">useful hack for responsive iframes</a>. It employs a container div but seems to work on Google Maps, YouTube videos and SoundCloud audio embeds...</p>
 	<div class="row">		
@@ -204,14 +222,26 @@ function downloadCSV() {
 	</div>	
 </div></section>
 <hr>
-<section><div class="wrap">
+<section id="forms"><div class="wrap">
 	<div class="row">
 		<div class="col-50">
 			<h2>Forms</h2>
-			<p>Last of all, we come to the form elements...</p>
+			<p>Last of all, we come to the form elements. For simplicity, I like <a href="http://css-tricks.com/forums/users/joeldom/replies/">this snippet that joeldom posted on css-tricks.com</a> that resets all form elements to be consistent across browsers. There's also <a href="http://necolas.github.io/normalize.css/">normalize.css</a> which looks good.</p>
+			<h3>HTML5 Input Types</h3>
+			<P>According to <a href="http://www.caniuse.com">caniuse.com</a> support for the various interesting HTML5 input types like <code>&lt;input type="date"&gt;</code> is quite limited, so I've avoided using that. There doesn't seem to be a great solution for date input with HTML/CSS only. I will refer to this <a href="http://www.w3schools.com/html/html5_form_input_types.asp">list of HTML5 input types</a> on w3schools as I believe they just fall back to type="text" on older browsers but are useful for mobile devices. This is indeed <a href="http://diveintohtml5.info/forms.html">a form of madness...</a></P>
 		</div>
 		<div class="col-50">
-			<form>
+			<form>				
+				<label>Name: </label><input type="text" placeholder="e.g. Rumplestiltskin...">
+				<br>
+				<label>Email: </label><input type="email" placeholder="your@email.address">
+				<br>
+				<!-- Not supported in many browsers
+				<label>Date: </label><input type="date">
+				<br>
+				-->
+				<label>Text area: </label><textarea placeholder="Text goes here..."></textarea>
+				<br>
 				<label>Choices: </label>
 				<select>
 						<option selected>Pick one...</option>
@@ -227,12 +257,6 @@ function downloadCSV() {
 					</optgroup>
 				</select>
 				<br>
-				<label>Name: </label><input type="text" placeholder="e.g. Rumplestiltskin...">
-				<br>
-				<label>Email: </label><input type="email" placeholder="your@email.address">
-				<br>
-				<label>Date: </label><input type="date">
-				<br>
 				<label>Sherry? </label>
 				<fieldset>
 					<ul>
@@ -241,15 +265,14 @@ function downloadCSV() {
 					</ul>
 				</fieldset>
 				<br>
+				<!-- Not supported in many browsers
 				<label>Datalist: </label><input type="text" list="datalist">
 				<datalist id="datalist">
 					<option>Datalist Item 1</option>
 					<option>Datalist Item 2</option>
 					<option>Datalist Item 3</option>
 				</datalist>
-				<br>
-				<label>Text area: </label><textarea placeholder="Text goes here..."></textarea>
-				<br>
+				<br>-->				
 				<label>Do you like any of these? </label>
 				<fieldset>
 					<ul>
