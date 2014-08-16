@@ -9,8 +9,7 @@
 <nav>
 	<div class="wrap">
 	<h1 class="small-title">Fumblestyle</h1>
-	<label for="show-menu" class="show-menu">&#9776;</label>
-	<input type="checkbox" id="show-menu" role="button">
+	<div id="menu-button">&#9776;</div>
 	<ul id="menu">
 		<a href="#intro"><li>Intro</li></a>
 		<a href="#images"><li>Images</li></a>
@@ -283,7 +282,7 @@ function downloadCSV() {
 					</ul>
 				</fieldset>
 				<br>
-				<button>Submit</button>
+				<button onclick="dummyForm()">Submit</button>
 			</form>
 		</div>
 	</div>
@@ -297,6 +296,27 @@ function downloadCSV() {
 	<p class="cc"><a href="https://github.com/albertkawmi/fumblestyle">Fumblestyle on Github</a></p>
 </div>
 </footer>
+<script>
+	var button = document.getElementById('menu-button');
+	var menu = document.getElementById('menu');
 
+	function toggleMenu() {
+		if(menu.style.display !== "block") { menu.style.display = "block"; }
+		else { menu.style.display = "none"; }
+	}
+
+	function hideMenu() {
+		menu.style.display = "none";
+	}
+
+	function dummyForm() {
+		alert("This form doesn't do anything...");
+	}
+
+	button.onclick = toggleMenu;
+
+	menu.onclick = hideMenu;
+
+</script>
 </body>
 </html>

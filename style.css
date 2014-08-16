@@ -101,10 +101,7 @@ nav a {
   color: #eee7ff;
   text-decoration: none; }
 
-nav label {
-  margin: 0; }
-
-.show-menu, #show-menu, .small-title {
+#menu-button, .small-title {
   display: none;
   margin: 0;
   padding: 0.5rem; }
@@ -461,25 +458,21 @@ form li {
     width: 100%;
     padding: 0.5rem;
     margin: 0 auto;
-    clear: both; }
+    clear: both;
+    font-size: 1rem; }
 
-  nav ul {
+  nav ul#menu {
     display: none; }
 
-  nav label {
-    margin: 0;
+  #menu-button {
+    display: inline-block;
+    margin: auto 0;
     padding: 0;
+    padding-right: 0.5rem;
+    padding-top: 0.8rem;
     font-size: 1.5rem;
     width: auto;
     float: right;
     color: #eee7ff;
     background: #5c4d7f;
-    line-height: 1rem; }
-
-  .show-menu {
-    display: inline-block;
-    margin: auto 0;
-    padding-top: 0.8rem; }
-
-  input#show-menu:checked ~ #menu {
-    display: block; } }
+    line-height: 1rem; } }
