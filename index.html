@@ -11,11 +11,11 @@
 	<h1 class="small-title">Fumblestyle</h1>
 	<div id="menu-button">&#9776;</div>
 	<ul id="menu">
-		<a href="#intro"><li>Intro</li></a>
-		<a href="#images"><li>Images</li></a>
+		<a href="#intro"><li>Intro</li></a>		
 		<a href="#layout"><li>Layout</li></a>
+		<a href="#images"><li>Images</li></a>
 		<a href="#headings"><li>Headings</li></a>
-		<a href="#typography"><li>Code & Quotes</li></a>
+		<a href="#code"><li>Code & Quotes</li></a>
 		<a href="#lists"><li>Lists</li></a>
 		<a href="#tables"><li>Tables</li></a>
 		<a href="#iframes"><li>iframes</li></a>
@@ -26,27 +26,21 @@
 <header class="darkest-bg"><div class="wrap">
 
 	<h1 class="title">Fumblestyle</h1>
-	<h1 class="logo"><span class="fontelico-emo-happy"></span></h1>
+	<h1 class="logo">:)</h1>
 	
-	<p class="strapline">I'm fumbling around with stylesheets using <a href="http://sass-lang.com/">Sass</a> (SCSS) with <a href="http://koala-app.com/">Koala</a>.</p>
+	<p class="strapline">I'm fumbling around with stylesheets learning <a href="http://sass-lang.com/">Sass</a>.</p>
 </div></header>
 
 <main>
 
 <section id="intro"><div class="wrap">
 	<h2>Introduction</h2>
-	<p>This is a learning project to create a simple CSS stylesheet that can be used as a starting point for future projects. The focus is on simplicity, whilst making sure that the information looks good on both large and small screens. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
+	<p>As a project to learn Sass (SCSS) I thought I'd create some basic patterns to style most commonly used HTML elements. The focus is on simplicity, whilst making sure that the elements look good on both large and small screens. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
+	<p>I tried to do this entirely in HTML/CSS but decided to add some simple Javascript to make the menu responsive. An earlier version used the <a href="http://css-tricks.com/the-checkbox-hack/">CSS checkbox hack</a> but it seems more sensible to use Javascript to control behaviour. I'm very sensible. :)</p>
 	<h3>CSS Resources</h3>
 	<p>I'll link to tools, tutorials and relevant articles as I fumble along. The smily-face logo utilises the 'fontelico' font via <a href="http://weloveiconfonts.com/">weloveiconfonts.com</a> and I used <a href="https://kuler.adobe.com/create/color-wheel/">Adobe's colour wheel tool</a> to pick the colour scheme. A lot of help came from <a href="http://css-tricks.com/">CSS Tricks</a> and <a href="http://www.w3schools.com/css/default.asp">W3 Schools</a> was a handy reference.</p>
 	<h3>Sections</h3>
 	<p>Each of these sections is wrapped in a div with <code>max-width: 960px</code> so that I could set the background colour across the full width of the screen but keep the content to 960px. I thought about implementing this <a href="http://css-tricks.com/examples/FullBrowserWidthBars/">example of full browser width bars</a>, but it felt like overkill for the sake of avoiding one wrapper div (per section...) I might return to it in future.</p>
-</div></section>
-<hr>
-<section id="images" class="pale-bg"><div class="wrap">
-	<h2>Images</h2>
-	<p>I have set <code>img { width: 100%; }</code> as a default for responsive images. I imagine there will be more to it than this, but it should serve as a starting point so that if images are dropped into the page they don't look too bad on whatever screen size.</p>
-	<img src="http://placekitten.com/1200/400">
-	<p>Thanks to <a href="http://placekitten.com">placekitten.com</a> for providing kitten placeholder images in any dimensions. I also like <a href="http://placehold.it/">placehold.it</a> for sites where a lower cuteness factor is more appropriate.</p>
 </div></section>
 <hr>
 <section id="layout"><div class="wrap">
@@ -86,12 +80,16 @@
 	<P>Lastly, here's a <a href="http://learnlayout.com/">great tutorial about CSS layout</a> which I found very useful as a newcomer.</p>
 </div></section>
 <hr>
+<section id="images" class="pale-bg"><div class="wrap">
+	<h2>Images</h2>
+	<p>I have set <code>img { width: 100%; }</code> as a default for responsive images. I imagine there will be more to it than this, but it should serve as a starting point so that if images are dropped into the page they don't look too bad on whatever screen size.</p>
+	<img src="http://placekitten.com/1200/400">
+	<p>Thanks to <a href="http://placekitten.com">placekitten.com</a> for providing kitten placeholder images in any dimensions. I also like <a href="http://placehold.it/">placehold.it</a> for sites where a lower cuteness factor is more appropriate.</p>
+</div></section>
+<hr>
 <section id="headings" class="pale-bg"><div class="wrap">
 	<div class="row">
-		<div class="col-50">
-			<h2>A rant about CSS layouts</h2>
-			<p>I am  perplexed by how difficult it is to put text in boxes and place those boxes exactly how you want them. I know there are frameworks and grid patterns and so on and so forth. But it is remarkably complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>	
-		</div>		
+			
 		<div class="col-50">
 			<h1>Heading 1</h1>
 			<h2>Heading 2</h2>
@@ -100,12 +98,16 @@
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
 		</div>
+		<div class="col-50">
+			<h2>A rant about CSS layouts</h2>
+			<p>I am  perplexed by how difficult it is to put text in boxes and place those boxes exactly how you want them. I know there are frameworks and grid patterns and so on and so forth. But it is remarkably complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>	
+		</div>	
 	</div>
 </div></section>
 <hr>
-<section id="typography"><div class="wrap">
-	<h2>More Typography</h2>
-	<p>This section showcases the remaining typography elements. Rather than reach for some lorem ipsum, I'll rattle off a few of them here... We've alrady had the <code>&lt;code&gt;</code> tag and there's the<code>&lt;pre&gt;</code> tag for blocks of code:</p>
+<section id="code"><div class="wrap">
+	<h2>Styling Code & Quotes</h2>
+	<p>We've alrady had the <code>&lt;code&gt;</code> tag and here's the<code>&lt;pre&gt;</code> tag for blocks of code:</p>
 <pre>
 function downloadCSV() {
 	//join the CSV rows separated by a newline character
@@ -126,7 +128,7 @@ function downloadCSV() {
 	a.style.display = 'inline';
 	}
 </pre>
-	<p>Next, the blockquote for highlighting profound passages of prose:</p>
+	<p>The blockquote for highlighting profound passages of prose:</p>
 	<blockquote>"This is the day of dramatisation. Merely stating a truth isn't enough. The truth has to be made vivid, interesting, dramatic. You have to use showmanship. The movies do it. Television does it. And you will too if you want attention."</blockquote>
 	<p>Next let's take a look at lists...</p>
 </div></section>
@@ -299,23 +301,35 @@ function downloadCSV() {
 <script>
 	var button = document.getElementById('menu-button');
 	var menu = document.getElementById('menu');
+	var hideFlag = false;
 
 	function toggleMenu() {
 		if(menu.style.display !== "block") { menu.style.display = "block"; }
 		else { menu.style.display = "none"; }
+		hideFlag = true;
 	}
 
 	function hideMenu() {
-		menu.style.display = "none";
+		if(hideFlag) { menu.style.display = "none"; }
 	}
 
 	function dummyForm() {
 		alert("This form doesn't do anything...");
 	}
 
-	button.onclick = toggleMenu;
+	function resizeToggle() {
+		if(button.style.display !== "inline-block") {
+			menu.style.display = "block";
+			console.log("Resized with no button.")
+		}
+		else {
+			console.log("Resized with button showing.")
+		}
+	}
 
+	button.onclick = toggleMenu;
 	menu.onclick = hideMenu;
+	window.onresize = resizeToggle;
 
 </script>
 </body>

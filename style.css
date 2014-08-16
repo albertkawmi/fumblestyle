@@ -3,7 +3,6 @@
 /***** Fonts */
 /***** Colour Scheme */
 @import url(http://fonts.googleapis.com/css?family=Lustria|Voces);
-@import url(http://weloveiconfonts.com/api/?family=fontelico);
 .wrap {
   max-width: 960px;
   margin: 0 auto;
@@ -102,9 +101,11 @@ nav a {
   text-decoration: none; }
 
 #menu-button, .small-title {
-  display: none;
   margin: 0;
   padding: 0.5rem; }
+
+.hidden {
+  display: none; }
 
 textarea,
 select,
@@ -174,10 +175,6 @@ hr {
   border-bottom: 5px dashed #5c4d7f;
   background: #eee7ff;
   margin: 0; }
-
-/* fontelico - courtesy of http://weloveiconfonts.com/ */
-[class*="fontelico-"]:before {
-  font-family: 'fontelico', sans-serif; }
 
 /***** Typography *********************************************************************************/
 p {
@@ -307,7 +304,8 @@ header h1, header a {
   color: #eee7ff; }
 
 .logo {
-  float: right; }
+  float: right;
+  transform: rotate(90deg); }
 
 .title {
   float: left; }
@@ -385,7 +383,7 @@ form li {
   display: inline-block; }
 
 /***** Media Queries *********************************************************************************/
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 600px) {
   div[class^=col-] {
     display: block;
     width: 98%;
@@ -459,7 +457,8 @@ form li {
     padding: 0.5rem;
     margin: 0 auto;
     clear: both;
-    font-size: 1rem; }
+    font-size: 1rem;
+    border-top: dotted 1px #eee7ff; }
 
   nav ul#menu {
     display: none; }

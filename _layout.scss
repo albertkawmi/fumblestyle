@@ -102,8 +102,11 @@ nav a {
 }
 
 #menu-button, .small-title {
-	display: none;
 	margin: 0;
 	padding: 0.5rem;
+}
+
+.hidden {
+	display: none;
 }
 
