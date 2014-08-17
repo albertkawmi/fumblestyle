@@ -12,10 +12,10 @@
 	<div id="menu-button">&#9776;</div>
 	<ul id="menu">
 		<a href="#intro"><li>Intro</li></a>
-		<a href="#images"><li>Images</li></a>
 		<a href="#layout"><li>Layout</li></a>
+		<a href="#images"><li>Images</li></a>
 		<a href="#headings"><li>Headings</li></a>
-		<a href="#typography"><li>Code & Quotes</li></a>
+		<a href="#code"><li>Code & Quotes</li></a>
 		<a href="#lists"><li>Lists</li></a>
 		<a href="#tables"><li>Tables</li></a>
 		<a href="#iframes"><li>iframes</li></a>
@@ -300,23 +300,39 @@ function downloadCSV() {
 <script>
 	var button = document.getElementById('menu-button');
 	var menu = document.getElementById('menu');
+	var hideMenuWhenClicked = false;
 
 	function toggleMenu() {
 		if(menu.style.display !== "block") { menu.style.display = "block"; }
 		else { menu.style.display = "none"; }
+		hideMenuWhenClicked = true;
 	}
 
 	function hideMenu() {
-		menu.style.display = "none";
+		if(hideMenuWhenClicked) { 
+			menu.style.display = "none"; 
+			hideMenuWhenClicked = false;
+		}
 	}
 
 	function dummyForm() {
 		alert("This form doesn't do anything...");
 	}
 
-	button.onclick = toggleMenu;
+	function windowResize() {
+    	if(window.getComputedStyle(button).getPropertyValue('display') === "none") {
+    		menu.style.display = "block";
+    		hideMenuWhenClicked = false;
+    	}
+    	else {
+    		menu.style.display = "none";
+    	}
 
+	}
+
+	button.onclick = toggleMenu;
 	menu.onclick = hideMenu;
+	window.onresize = windowResize;
 
 </script>
 </body>
