@@ -65,9 +65,10 @@
 		margin: 0 auto;
 		clear: both;
 		font-size: 1rem;
+		border-top: dotted 1px $palest;
 	}
 
-	nav ul#menu {
+	#menu {
 		display: none;
 	}
 
