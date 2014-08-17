@@ -28,15 +28,15 @@
 	<h1 class="title">Fumblestyle</h1>
 	<h1 class="logo"><span class="fontelico-emo-happy"></span></h1>
 	
-	<p class="strapline">I'm fumbling around with stylesheets learning <a href="http://sass-lang.com/">Sass</a>.</p>
+	<p class="strapline">I'm fumbling around with CSS and <a href="http://sass-lang.com/">Sass</a>.</p>
 </div></header>
 
 <main>
 
 <section id="intro"><div class="wrap">
 	<h2>Introduction</h2>
-	<p>As a project to learn Sass (SCSS) I thought I'd create some basic patterns to style most commonly used HTML elements. The focus is on simplicity, whilst making sure that the elements look good on both large and small screens. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
-	<p>I tried to do this entirely in HTML/CSS but decided to add some simple Javascript to make the menu responsive. An earlier version used the <a href="http://css-tricks.com/the-checkbox-hack/">CSS checkbox hack</a> but it seems more sensible to use Javascript to control behaviour. I'm very sensible. :)</p>
+	<p>I am learning to use CSS with the Sass preprocessor (SCSS). So I created these basic patterns to style most commonly used HTML elements. The focus is on simplicity, whilst making sure that the elements look at least OK on both large and small screens. I've put <a href="http://albertkawmi.github.io/fumblestyle/">this on Github</a> too and welcome any feedback/criticism of these fumblings!</p>
+	<p>I tried to do this entirely in HTML/CSS but decided to add some simple Javascript to make the menu responsive. An earlier version used the <a href="http://css-tricks.com/the-checkbox-hack/">CSS checkbox hack</a> but it seems more sensible to use Javascript to control behaviour.</p>
 	<h3>CSS Resources</h3>
 	<p>I'll link to tools, tutorials and relevant articles as I fumble along. The smily-face logo utilises the 'fontelico' font via <a href="http://weloveiconfonts.com/">weloveiconfonts.com</a> and I used <a href="https://kuler.adobe.com/create/color-wheel/">Adobe's colour wheel tool</a> to pick the colour scheme. A lot of help came from <a href="http://css-tricks.com/">CSS Tricks</a> and <a href="http://www.w3schools.com/css/default.asp">W3 Schools</a> was a handy reference.</p>
 	<h3>Sections</h3>
@@ -45,7 +45,7 @@
 <hr>
 <section id="layout"><div class="wrap">
 	<h2>Simple Layout</h2>
-	<p>This is intended to be a simple structure for creating rows and columns.</p>
+	<p>I wanted a simple structure for creating rows and columns.</p>
 	<p>Here is a single row with three columns which I gave the class name <code>.col-33</code>. The '33' represents the approximate width of the column depending on how many you want in a row. More classes have been added to allow for different layouts: <code>.col-25, .col-75, .col-66</code> and so on.</p>
 	<div class="row">
 		<div class="col-33 pale-bg">Block 1 has just one sentence in it.</div>
@@ -77,7 +77,7 @@
 			<img src="http://placekitten.com/195/195">
 		</div>
 	</div>
-	<P>Lastly, here's a <a href="http://learnlayout.com/">great tutorial about CSS layout</a> which I found very useful as a newcomer.</p>
+	<P>Lastly, I should linke to this <a href="http://learnlayout.com/">great tutorial about CSS layout</a> which I found very useful as a newcomer.</p>
 </div></section>
 <hr>
 <section id="images" class="pale-bg"><div class="wrap">
@@ -88,8 +88,7 @@
 </div></section>
 <hr>
 <section id="headings" class="pale-bg"><div class="wrap">
-	<div class="row">
-			
+	<div class="row">			
 		<div class="col-50">
 			<h1>Heading 1</h1>
 			<h2>Heading 2</h2>
@@ -100,7 +99,7 @@
 		</div>
 		<div class="col-50">
 			<h2>A rant about CSS layouts</h2>
-			<p>I am  perplexed by how difficult it is to put text in boxes and place those boxes exactly how you want them. I know there are frameworks and grid patterns and so on and so forth. But it is remarkably complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>	
+			<p>I am (naively) surprised by how difficult it is to put text in boxes and place those boxes exactly how you want them. I read about frameworks and grid patterns and so on and so forth. But all seems overly complicated considering the task at hand. And I'm not trying to be dismissive of CSS; it's just that if I spend half an hour to place these three divs neatly in a line and turn to my wife to share this triumph, you can't blame her for looking at me like "wtf..?"</p>	
 		</div>	
 	</div>
 </div></section>
@@ -129,13 +128,13 @@ function downloadCSV() {
 	}
 </pre>
 	<p>The blockquote for highlighting profound passages of prose:</p>
-	<blockquote>"This is the day of dramatisation. Merely stating a truth isn't enough. The truth has to be made vivid, interesting, dramatic. You have to use showmanship. The movies do it. Television does it. And you will too if you want attention."</blockquote>
+	<blockquote>"This is the day of dramatisation. Merely stating a truth isn't enough. The truth has to be made vivid, interesting, dramatic. You have to use showmanship. The movies do it. Television does it. And you will too if you want attention." -- Dale Carnegie</blockquote>
 	<p>Next let's take a look at lists...</p>
 </div></section>
 <hr>
 <section id="lists" class="pale-bg"><div class="wrap">
 <h2>Lists</h2>
-<p>Support for the <code>::marker</code> pseudo-element would be cool because, although you can style list items with images, you can't format the list markers as text with CSS. For example, I'd like the bullets and numbers to be coloured purple-is this possible?</p>
+<p>Browser support for the <code>::marker</code> pseudo-element would be useful because, although you can style list items with images, you can't format the list markers as text with CSS. For example, I'd like the bullets and numbers to be coloured purple-is this possible without using images?</p>
 	<div class="row">
 		<div class="col-33 top-line white-bg">
 			<h3>Ordered Lists</h3>
@@ -204,7 +203,7 @@ function downloadCSV() {
 <hr>
 <section id="iframes" class="pale-bg"><div class="wrap">
 	<h2>Responsive iframes</h2>
-	<p>Found a <a href="http://www.a1bloggerseo.com/2014/07/google-map-code-for-responsive-websites.html">useful hack for responsive iframes</a>. It employs a container div but seems to work on Google Maps, YouTube videos and SoundCloud audio embeds...</p>
+	<p>This seems to be a <a href="http://www.a1bloggerseo.com/2014/07/google-map-code-for-responsive-websites.html">useful hack for responsive iframes</a>. It employs a container div but appears to work on Google Maps, YouTube videos and SoundCloud audio embeds...</p>
 	<div class="row">		
 		<div class="col-33">
 			<div class="iframe-wrap">
@@ -228,7 +227,7 @@ function downloadCSV() {
 	<div class="row">
 		<div class="col-50">
 			<h2>Forms</h2>
-			<p>Last of all, we come to the form elements. For simplicity, I like <a href="http://css-tricks.com/forums/users/joeldom/replies/">this snippet that joeldom posted on css-tricks.com</a> that resets all form elements to be consistent across browsers. There's also <a href="http://necolas.github.io/normalize.css/">normalize.css</a> which looks good.</p>
+			<p>Last of all, we come to the form elements. For simplicity, I like <a href="http://css-tricks.com/forums/users/joeldom/replies/">this snippet that joeldom posted on css-tricks.com</a> that resets all form elements to be consistent across browsers. There's also <a href="http://necolas.github.io/normalize.css/">normalize.css</a> which seems good but more involved.</p>
 			<h3>HTML5 Input Types</h3>
 			<P>According to <a href="http://www.caniuse.com">caniuse.com</a> support for the various interesting HTML5 input types like <code>&lt;input type="date"&gt;</code> is quite limited, so I've avoided using that. There doesn't seem to be a great solution for date input with HTML/CSS only. I will refer to this <a href="http://www.w3schools.com/html/html5_form_input_types.asp">list of HTML5 input types</a> on w3schools as I believe they just fall back to type="text" on older browsers but are useful for mobile devices. This is indeed <a href="http://diveintohtml5.info/forms.html">a form of madness...</a></P>
 		</div>
