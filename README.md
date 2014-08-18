@@ -1,4 +1,4 @@
 # Fumblesyle :)
-### I'm fumbling around with stylesheets using Sass (SCSS) with Koala.
+### I'm fumbling around with CSS and Sass.
 
-I find the idea of styleguides quite interesting. I am not a front-end developer, but this seems like the best way to start any serious project; create a single HTML page that contains all the different elements and design patterns that you'll use in a project. A thoroughly put-together styleguide allows you to see what impact your CSS changes have across all your design elements, saving you having to test against everything. (I guess...)
+I am learning to use CSS with the Sass preprocessor (SCSS). So I created these basic patterns to style most commonly used HTML elements. The focus is on simplicity, whilst making sure that the elements look at least OK on both large and small screens. I've put this on Github too and welcome any feedback/criticism of these fumblings!
